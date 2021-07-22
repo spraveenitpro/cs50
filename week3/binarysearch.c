@@ -2,7 +2,6 @@
 #include <cs50.h>
 int main(void)
 {
-
     int total = get_int("\nEnter the number of elements: \n");
     int haystack[total];
     int min;
@@ -34,13 +33,14 @@ int main(void)
             max = middle - 1;
         }
 
-        if ( min > max )
-        {
-            printf ("Not Found!! \n");
-            return 1;
-        }
+
         middle  = (min + max)/2;
 
+    }
+    if ( min > max )
+    {
+        printf ("Not Found!! \n");
+        return 1;
     }
 
 }
